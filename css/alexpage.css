@@ -75,6 +75,10 @@ margin: 0;
 	padding: 10px 15px;
 	transition: all 0.3s ease-in-out;
 }
+.nav-bar a:active,
+.nav-bar a.active {
+	color: #42DCA3;
+}
 .nav-bar a:hover {
 	color: #42DCA3;
 }
