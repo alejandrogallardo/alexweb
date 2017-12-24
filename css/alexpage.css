@@ -352,7 +352,16 @@ position: bottom;
 		font-size: 15px;
 		padding: 1px 4px;
 	}
+	section {
+		height: 100vh;
+		padding-top: 1em;
+		overflow: hidden;
+	}
+	.portada {
+		height: 100vh;
+	}
 }
+
 @media screen and (max-width: 320px) {
 	.name {
 		margin-top: 60px;
