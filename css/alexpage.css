@@ -295,6 +295,12 @@ position: bottom;
 	.nav-bar a {
 		font-size: 20px;
 	}
+	.name {
+		font-size: 35px;
+	}
+	.titulo {
+		font-size: 18px;
+	}
 }
 /* fin WXVGA */
 /* phone */
@@ -353,23 +359,24 @@ position: bottom;
 		padding: 1px 4px;
 	}
 	section {
-		height: 100vh;
+		height: 100%;
 		padding-top: 1em;
 		overflow: hidden;
 	}
 	.portada {
-		height: 100vh;
+		height: 100%;
 	}
+
 }
 
 @media screen and (max-width: 320px) {
-	.name {
+	/*.name {
 		margin-top: 60px;
 		font-size: 20px;
 	}
 	.titulo {
 		font-size: 12px;
-	}
+	}*/
 	.portada {
 		height: auto;
 	}
