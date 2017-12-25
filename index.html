@@ -16,7 +16,7 @@
 <span id="burguer" class="burguerbtn icon-menu"></span>
 	<nav id="navbar" class="nav-bar active">
 		<a href="#top" class="retornar">Home</a>
-    	<div class="menu">
+    	<div id="nMenu" class="menu">
 			<ul>
 				<li class="nav-item"><a class="nav-link" href="#aboutme">Sobre mí</a></li>
 				<li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
@@ -101,11 +101,14 @@
     </div>
 </footer>
 <script>
-	var $burguer = document.getElementById('burguer');
-	var $navbar = document.getElementById('navbar');
-	$burguer.addEventListener('touchstart', toggleMenu); 
+	const $burguer = document.getElementById('burguer');
+	const $navbar = document.getElementById('navbar');
+	const $menu = document.getElementById('nMenu');
+	$burguer.addEventListener('touchstart', toggleMenu);
+	$menu.addEventListener('click', toggleMenu); 
 	function toggleMenu () {
 	$navbar.classList.toggle('active')
+	$menu.classList.remove('active')
 };
 </script>
 </body>
