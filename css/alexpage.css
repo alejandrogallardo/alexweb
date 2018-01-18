@@ -136,6 +136,23 @@ color: #42DCA3;
 	height: 100vh;
 	background-repeat: no-repeat;
 }
+
+/* animacion portada */
+.anim {
+	animation-name: portada;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+}
+@keyframes portada {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* fin animacion portada*/
 section {
 	background-color: #000000;
 	color: #ffffff;
