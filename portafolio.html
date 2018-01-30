@@ -3,32 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portafolio</title>
-	<style>
-		body {
-			display: flex;
-			background: black;
-	}
-		.container {
-			margin: 0 auto;
-			color: peru;
-	}
-		.btn {
-		padding: 10px 32px;
-		text-decoration: none;
-		font-size: 16px;
-		display: inline-block;
-		margin-top: 15px;
-		color: #42DCA3;
-	    border: 1px solid #42DCA3;
-	    background-color: transparent;
-	}
-		.btn:focus, .btn:hover {
-	    color: black;
-	    border: 1px solid #42DCA3;
-	    outline: none;
-	    background-color: #42DCA3; 
-	}
-	</style>
+	<!-- tipografia -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/alexpage.css">
+	<!-- fin tipografia -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112266124-1"></script>
         <script>
@@ -41,9 +22,44 @@
 
 </head>
 <body>
-	<div class="container">
-		<h1>Sitio en construcción</h1>
-		<a class="btn" href="index.html">regresar</a>
+<!-- menu de navegacion -->
+<div class="anim">
+	<span id="burguer" class="burguerbtn icon-menu"></span>
+	<nav id="navbar" class="nav-bar active">
+		<a href="#top" class="retornar">Home</a>
+		<div id="nMenu" class="menu">
+			<ul>
+				<li class="nav-item"><a class="nav-link" href="#aboutme">Sobre mí</a></li>
+				<li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+				<li class="nav-item"><a class="nav-link" href="portafolio.html">Portafolio</a></li>
+				<li class="nav-item"><a class="nav-link" href="#footer">Contacto</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- / fin menu de navegacion -->
+	<!-- encabezado -->
+	<div id="portada" class="portada">
+		<h1 class="name">Portafolio</h1>
+		<!--<h3 class="titulo">Marketing Digital | Desarrollo Web</h3>-->
+		<a href="#aboutme" class="main-btn"><span class="btn-name">Conoce más</span><i class="icon-circle-down"></i></a>
 	</div>
+</div>
+<!-- fin encabezado -->
+
+
+
+
+
+<script>
+    const $burguer = document.getElementById('burguer');
+    const $navbar = document.getElementById('navbar');
+    const $menu = document.getElementById('nMenu');
+    $burguer.addEventListener('touchstart', toggleMenu);
+    $menu.addEventListener('click', toggleMenu);
+    function toggleMenu () {
+        $navbar.classList.toggle('active')
+        $menu.classList.remove('active')
+    };
+</script>
 </body>
 </html>
