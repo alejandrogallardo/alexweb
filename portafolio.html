@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Portafolio</title>
 	<link rel="shorcut icon" type="image/x-icon" href="img/favicon.ico">
+	<meta name="title" content="Alejandro Gallardo - Desarrollo Web, diseño gráfico y Fotografía" />
+	<meta name="author" content="Alejandro Gallardo" />
 	<!-- tipografia -->
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -45,7 +47,6 @@
 	</div>
 </div>
 <!-- fin encabezado -->
-
 <section class="portaF">
 	<h1>Páginas Web</h1>
 	<div class="contcards">
@@ -113,6 +114,26 @@
         $navbar.classList.toggle('active')
         $menu.classList.remove('active')
     };
+     //   automatico
+    var slideIndex = 0;
+
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+
+    $(document).ready(function () {
+        $(".fancybox").fancybox();
+    });
 </script>
 </body>
 </html>
